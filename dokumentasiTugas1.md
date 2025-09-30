@@ -1,6 +1,6 @@
 # Panduan Instalasi virtualbox
 ## Wilma Auraruna Khalif - A11.2024.15841
-## _Installasi VM menggunakan Arch linux_
+## _Installasi VM menggunakan Arch linux _
 
 Langkah pertama adalah menggunakan _package manager Arch_ 'pacman' untuk menginstal paket 'virtualbox'
 
@@ -76,3 +76,7 @@ Setelah itu press next lalu finish.
 ![MaafTidakBisa](./installasi_vm/openUbuntu2.png)
 ---
 ## Network Configuration
+
+### NAT
+---
+**Nat** adalah cara paling simpel untuk mengakses jaringan eksternal dari _virtual machine_
