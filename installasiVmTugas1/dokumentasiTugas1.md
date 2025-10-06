@@ -1,12 +1,12 @@
 <div align='center'>
 
-# **Panduan Instalasi virtualbox**
+# 👇** Panduan Instalasi virtualbox **👇
 
 # **Wilma Auraruna Khalif - A11.2024.15841**
 
 </div>
 
-## Installasi VM menggunakan Arch linux
+## ✨ Installasi VM menggunakan Arch linux
 
 Langkah pertama adalah menggunakan _package manager Arch_ 'pacman' untuk menginstal paket `virtualbox`
 
@@ -16,7 +16,7 @@ sudo pacman -S virtualbox
 
 ![maaf gagal](./img/installing.png)
 
-## Konfigurasi Kernel dan Hak Akses Pengguna
+## ⚙️ Konfigurasi Kernel dan Hak Akses Pengguna
 
 ### Kernel
 
@@ -50,11 +50,11 @@ sudo usermod -aG vboxusers $USER
 
 ![maaf gagal](./img/kernelDanGroup.png)
 
-## Menjalankan Virtualbox
+## 🚀 Menjalankan Virtualbox
 
-![MaafTidakBisa](./openVirtual.png)
+![MaafTidakBisa](./img/openVirtual.png)
 
-## Instalasi Ubuntu
+## 📥 Instalasi Ubuntu
 
 Sebelum itu, kita membutuhkan iso ubuntu terlebih dahulu. **Berikut Link untuk mendownload:**
 
@@ -62,12 +62,12 @@ Sebelum itu, kita membutuhkan iso ubuntu terlebih dahulu. **Berikut Link untuk m
 https://ubuntu.com/download/desktop
 ```
 
-Setelah itu tekan **Ctrl + N** untuk membuat VM yang baru.
+Setelah itu tekan **`Ctrl + N`** untuk membuat VM yang baru.
 
 ![MaafTidakBisa](./img/memilihIso.png)
 
 - Pilih ISO image yang sudah di download.
-- Namai dengan ubuntu
+- Namai dengan ubuntu-vm
 
 ### Set up Unattended guest OS installation
 
@@ -91,21 +91,29 @@ Setelah itu press next lalu finish.
 
 ![MaafTidakBisa](./img/openUbuntu2.png)
 
-## Network Configuration
+## 🌐 Network Configuration
 
-### NAT
+### 🔌 NAT
 
 ---
 
 **Nat** adalah cara paling simpel untuk mengakses jaringan eksternal dari _virtual machine_. **Gampangnya** ketika VM meminta akses internet, **host** akan menerjemahkan perintah itu ke router.
 
-### Cara check adapter:
+### 🔎 Cara check adapter:
 
-1. Click ubuntu lalu shortcut `ctrl + S`
+1. Click ubuntu lalu shortcut **`ctrl + S`**
 
 ![MaafTidakBisa](./img/machines.png)
 
 2. Pilih Network
 
-Virtualbox otomatis akan menggunakan NAT sebagai default adapter.
+> [!NOTE]
+> Virtualbox otomatis akan menggunakan NAT sebagai default adapter.
+
 ![MaafTidakBisa](./img/nat.png)
+
+3. Test Ping
+
+![MaafTidakBisa](./img/natPing.png)
+
+### 💥 Bridged Adapter
