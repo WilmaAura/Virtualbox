@@ -171,5 +171,10 @@ Buat dulu virtual network interface pada VM yang berfungsi seperti port atau kab
 - Config IP yang ada di OS Ubuntu juga.
   ![MaafTidakBisa](./img/addIpVm.png)
 
-> [!NOTE]
-> **`dev`** artinya adalah device
+> [!NOTE] > **`dev`** artinya adalah device. Lalu apa itu `enp0s3`
+>
+> | Bagian | Artinya                               |
+> | ------ | ------------------------------------- |
+> | **en** | Ethernet (koneksi kabel)              |
+> | **p0** | Jalur utama pada motherboard          |
+> | **s3** | Slot nomor 3 tempat adapter terpasang |
