@@ -1,12 +1,12 @@
 <div align='center'>
 
-# 👇** Panduan Instalasi virtualbox **👇
+# 👇** Panduan Penggunaan Virtual Machine **👇
 
-# **Wilma Auraruna Khalif - A11.2024.15841**
+## **Wilma Auraruna Khalif - A11.2024.15841**
 
 </div>
 
-## ✨ Installasi VM menggunakan Arch linux
+## ✨ Instalasi VM menggunakan Arch linux
 
 Langkah pertama adalah menggunakan _package manager Arch_ 'pacman' untuk menginstal paket `virtualbox`
 
@@ -62,7 +62,7 @@ Sebelum itu, kita membutuhkan iso ubuntu terlebih dahulu. **Berikut Link untuk m
 https://ubuntu.com/download/desktop
 ```
 
-Setelah itu tekan **`Ctrl + N`** untuk membuat VM yang baru.
+Setelah itu tekan **`CTRL + N`** untuk membuat VM yang baru.
 
 ![MaafTidakBisa](./img/memilihIso.png)
 
@@ -101,7 +101,7 @@ Setelah itu press next lalu finish.
 
 ### 🔎 Cara check adapter:
 
-1. Click ubuntu lalu shortcut **`ctrl + S`**
+1. Click ubuntu lalu shortcut **`CTRL + S`**
 
 ![MaafTidakBisa](./img/machines.png)
 
@@ -117,3 +117,59 @@ Setelah itu press next lalu finish.
 ![MaafTidakBisa](./img/natPing.png)
 
 ### 💥 Bridged Adapter
+
+Konsep Bridged Adapter, yaitu vm dan host di jaringan atau IP yang sama. Analoginya: VM menjadi komputer dengan jaringan yang sama seperti host.
+
+### 🔎︎ Cara Mengganti Adapter Menjadi Bridged
+
+1. Click **`Attached to`**, lalu pilih Bridget Adapter.
+
+![MaafTidakBisa](./img/brdiget.png)
+
+2. Ping Bridged
+
+![MaafTidakBisa](./img/bridgetPing2.png)
+
+### 🖥️ Host Only Adapter 🖥️
+
+Host only bisa disebut juga dengan komunikasi private antara host (PC Fisik) dengan VM itu sendiri atau VM dengan VM.
+
+### ⚙️ Konfigurasi Host Only Adapter
+
+1. **Konfigurasi IP pada host.**
+
+Menggunakan command line sebagai berikut:
+
+```bash
+sudo ip addr add 192.168.58.1/24 dev vboxnet0
+```
+
+![MaafTidakBisa](./img/ipHost.png)
+
+2. **Konfigurasi IP pada VM.**
+
+Buat dulu virtual network interface pada VM yang berfungsi seperti port atau kabel yang menghubungkan VM dengan host.
+
+- Pilih Network atau bisa dengan shortcut **`CTRL + H`**
+  ![MaafTidakBisa](./img/membuatHostOnly.png)
+
+- Click create lalu config IP address.
+  ![MaafTidakBisa](./img/virtualInterfaceConf.png)
+
+  > [!NOTE]
+  > Samakan IPv4 Address dengan IP host.
+  > Contoh cara menyamakan IP:
+  > | Device | IP Address | Connection |
+  > | -------- | ------------- | -------------------- |
+  > | Host | 192.168.58.41 | ✅ Same Network |
+  > | VM | 192.168.58.42 | ✅ Same Network |
+  > | Other VM | 192.168.10.41 | ❌ Different network |
+
+- `Attached to` ganti Host Only Network, lalu pada bagian name pilih vboxnet yang sudah dibikin.
+  ![MaafTidakBisa](./img/nameHostonly.png)
+
+- Config IP yang ada di OS Ubuntu juga.
+  ![MaafTidakBisa](./img/addIpVm.png)
+
+  > [!NOTE] >
+  > **`dev`** artinya adalah device
