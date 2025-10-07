@@ -171,5 +171,5 @@ Buat dulu virtual network interface pada VM yang berfungsi seperti port atau kab
 - Config IP yang ada di OS Ubuntu juga.
   ![MaafTidakBisa](./img/addIpVm.png)
 
-  > [!NOTE] >
-  > **`dev`** artinya adalah device
+> [!NOTE]
+> **`dev`** artinya adalah device
