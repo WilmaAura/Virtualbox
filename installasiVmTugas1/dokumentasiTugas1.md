@@ -156,14 +156,14 @@ Buat dulu virtual network interface pada VM yang berfungsi seperti port atau kab
 - Click create lalu config IP address.
   ![MaafTidakBisa](./img/virtualInterfaceConf.png)
 
-  > [!NOTE]
-  > Samakan IPv4 Address dengan IP host.
-  > Contoh cara menyamakan IP:
-  > | Device | IP Address | Connection |
-  > | -------- | ------------- | -------------------- |
-  > | Host | 192.168.58.41 | ✅ Same Network |
-  > | VM | 192.168.58.42 | ✅ Same Network |
-  > | Other VM | 192.168.10.41 | ❌ Different network |
+> [!NOTE]
+> Samakan IPv4 Address dengan IP host.
+> Contoh cara menyamakan IP:
+> | Device | IP Address | Connection |
+> | -------- | ------------- | -------------------- |
+> | Host | 192.168.58.41 | ✅ Same Network |
+> | VM | 192.168.58.42 | ✅ Same Network |
+> | Other VM | 192.168.10.41 | ❌ Different network |
 
 - `Attached to` ganti Host Only Network, lalu pada bagian name pilih vboxnet yang sudah dibikin.
   ![MaafTidakBisa](./img/nameHostonly.png)
