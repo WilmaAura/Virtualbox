@@ -172,9 +172,8 @@ Buat dulu virtual network interface pada VM yang berfungsi seperti port atau kab
   ![MaafTidakBisa](./img/addIpVm.png)
 
 > [!NOTE] > **`dev`** artinya adalah device. Lalu apa itu `enp0s3`
->
-> | Bagian | Artinya                               |
+> | Bagian | Artinya |
 > | ------ | ------------------------------------- |
-> | **en** | Ethernet (koneksi kabel)              |
-> | **p0** | Jalur utama pada motherboard          |
+> | **en** | Ethernet (koneksi kabel) |
+> | **p0** | Jalur utama pada motherboard |
 > | **s3** | Slot nomor 3 tempat adapter terpasang |
