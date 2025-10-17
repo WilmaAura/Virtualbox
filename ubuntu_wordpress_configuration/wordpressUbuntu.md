@@ -123,22 +123,22 @@ cp db.local db.websiteku
 cp db.127 db.192
 ```
 
-![sorry](/installWebServer_tugas2/img/listBind.png)
+![sorry](/ubuntu_wordpress_configuration/img/listBind.png)
 
 - Config `db.websiteku` like the photo below:
-  ![sorry](/installWebServer_tugas2/img/dbWebsiteku.png)
+  ![sorry](/ubuntu_wordpress_configuration/img/dbWebsiteku.png)
 
 > [!NOTE]
 > Configure the domain so that it points to the IP address which will be translated to your domain. For example: my domain is wilma123.local with my ip address `192.168.58.41`
 
 - Config db.192 like in this photo:
-  ![sorry](/installWebServer_tugas2/img/db192.png)
+  ![sorry](/ubuntu_wordpress_configuration/img/db192.png)
 
 > [!NOTE]The number of `41` represents the last octet of my IP address.
 > `db.192` is reverse lookup zone file. Reverse DNS is used to map an IP address to a hostname.
 
 - Edit file `named.conf.options` to create forwarders. When we make a request to another domain that we don't handle, our DNS server will forward it to the forwarders we've set up.
-  ![sorry](/installWebServer_tugas2/img/namedConfOps.png)
+  ![sorry](/ubuntu_wordpress_configuration/img/namedConfOps.png)
 
 - Restart bind9 and check with `nslookup`
 
@@ -153,7 +153,7 @@ nslookup 192.168.58.41
 sudo nano /etc/netplan/01-netcfg.yaml
 ```
 
-![sorry](/installWebServer_tugas2/img/yaml.png)
+![sorry](/ubuntu_wordpress_configuration/img/yaml.png)
 The last two oktet `58.41`is up to you. You can change it.
 
 ## MySQL Configuration
@@ -182,7 +182,7 @@ sudo systemstl status mysql
 
 If `Active (running)` your database is ready to set.
 
-![sorry](/installWebServer_tugas2/img/statusMysql.png)
+![sorry](/ubuntu_wordpress_configuration/img/statusMysql.png)
 
 ### Configure Database
 
@@ -256,7 +256,7 @@ sudo nano wilma123.local.conf
 
 Create conf with following lines:
 
-![sorry](/installWebServer_tugas2/img/configVirtual.png)
+![sorry](/ubuntu_wordpress_configuration/img/configVirtual.png)
 
 Enable the site:
 
@@ -286,6 +286,6 @@ sudo service apache2 reload
 
 Check with the domain that you have created.
 
-![sorry](/installWebServer_tugas2//img/wordpress.png)
+![sorry](/ubuntu_wordpress_configuration//img/wordpress.png)
 
 YOUR WORDPRESS IS READY TO USE!!!
