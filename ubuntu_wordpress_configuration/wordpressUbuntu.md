@@ -29,7 +29,7 @@ http://localhost
 http://192.168.58.41
 ```
 
-![sorry](/installWebServer_tugas2/img/defaultApache.png)
+![sorry](/ubuntu_wordpress_configuration/img/defaultApache.png)
 
 ### Creating Your Own Website
 
@@ -61,7 +61,7 @@ Paste the following code in the index.html
 </html>
 ```
 
-![sorry](/installWebServer_tugas2/img/website.png)
+![sorry](/ubuntu_wordpress_configuration/img/website.png)
 
 ### Setting up the VirtualHost Configuration File
 
@@ -86,7 +86,7 @@ sudo nano websiteku.conf
 ```
 
 Fill it in just like in the photo:
-![sorry](/installWebServer_tugas2/img/websitekuConf.png)
+![sorry](/ubuntu_wordpress_configuration/img/websitekuConf.png)
 
 Change the ServerAdmin to your Gmail and your ServerName.
 
@@ -99,7 +99,7 @@ Change the ServerAdmin to your Gmail and your ServerName.
 sudo a2ensite wilma123.local.conf
 ```
 
-![sorry](/installWebServer_tugas2/img/a2ensite.png)
+![sorry](/ubuntu_wordpress_configuration/img/a2ensite.png)
 
 ## DNS Configuration
 
